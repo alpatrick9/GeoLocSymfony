@@ -1,0 +1,26 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+use AncaRebeca\FullCalendarBundle\Model\Event as BaseEvent;
+
+/**
+ * CalendarEvent
+ *
+ * @ORM\Table(name="calendar_event")
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\CalendarEventRepository")
+ */
+class CalendarEvent extends BaseEvent
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    protected $id;
+    
+}
+
